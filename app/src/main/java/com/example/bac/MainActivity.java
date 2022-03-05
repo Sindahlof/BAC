@@ -2,6 +2,7 @@ package com.example.bac;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,12 +28,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void loginIO(android.view.View s){
+    public void loginIO(android.view.View s) {
         String email = "user";
         String password = "1234";
 
-        if (this.email.getText().toString().compareTo(email) == 0 && this.password.getText().toString().compareTo(password) == 0){
-            System.out.println("That was correct");
+        if (this.email.getText().toString().compareTo(email) == 0 && this.password.getText().toString().compareTo(password) == 0) {
+            Intent intent = new Intent(this, activity2.class);
+            startActivity(intent);
         } else {
             this.wrongLogin.setVisibility(View.VISIBLE);
             System.out.println("wrong login");
