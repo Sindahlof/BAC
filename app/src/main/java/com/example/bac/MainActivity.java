@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         this.email = (EditText) findViewById(R.id.editTextTextEmailAddress);
-        this.password = (EditText) findViewById(R.id.editTextNumberPassword);
+        this.password = (EditText) findViewById(R.id.editTextTextPassword);
         this.wrongLogin = (TextView) findViewById(R.id.textView2);
         this.wrongLogin.setVisibility(View.INVISIBLE);
     }
