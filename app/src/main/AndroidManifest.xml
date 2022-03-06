@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BAC">
         <activity
-            android:name=".activity2"
+            android:name=".NeedsGenderWeight"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
             android:exported="true">
 
             <!--

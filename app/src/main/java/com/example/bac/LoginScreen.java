@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginScreen extends AppCompatActivity {
 
     private EditText email;
     private EditText password;
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         this.email = (EditText) findViewById(R.id.editTextTextEmailAddress);
         this.password = (EditText) findViewById(R.id.editTextTextPassword);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         String password = "1234";
 
         if (this.email.getText().toString().compareTo(email) == 0 && this.password.getText().toString().compareTo(password) == 0) {
-            Intent intent = new Intent(this, activity2.class);
+            Intent intent = new Intent(this, MainScreen.class);
             startActivity(intent);
         } else {
             this.wrongLogin.setVisibility(View.VISIBLE);
