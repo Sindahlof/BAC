@@ -9,12 +9,7 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Scanner;
+import Domain.DataConnection;
 
 public class NeedsGenderWeight extends AppCompatActivity {
 
@@ -33,14 +28,7 @@ public class NeedsGenderWeight extends AppCompatActivity {
 
 
     public void addInfoHandler(View view){
-        if(this.height.getText().toString().compareTo("") == 0){
-            System.out.println("you have not entered your height");
-        } else{
-            try (FileWriter write = new FileWriter("genderAndWeight.txt")){
-                write.write(height.getText().toString());
-                write.write(gender.getSelectedItem().toString());
-            } catch (IOException e) {
-                System.out.println("file not found");            }
-        }
+        String data = this.height.getText().toString() + " " + this.gender.getSelectedItem().toString();
+        DataConnection.addDrinkDataHandler(data);
     }
 }
